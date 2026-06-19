@@ -78,7 +78,20 @@ body{
     height: 90%;
     /* margin-bottom: 20px; */
     /* object-fit: cover; */
+    animation: up-down 3.3s infinite;
 }
+@keyframes up-down {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
 .row{
     /* width: 100%; */
     /* height: 100%; */
@@ -144,5 +157,77 @@ body{
 .hero .cta:hover{
     background-color: #fff;
     color: #000;
-    transition: 0.3s ease-in;
+    transition: 0.3s ease-out;
+}
+
+
+.icon-card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.icon-card .card{
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.icon-card .card img{
+    height: 100px;
+    margin-top: 20px;
+}
+
+.icon-card .card h3{
+    font-family: 'Black Ops One', cursive;
+    font-size: 20px;
+    margin: 20px 0;
+}
+.icon-card .card p{
+    font-family: 'Raleway', cursive;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.icon-card .card:hover{
+    transform: translateY(-20px);
+    transition: 0.3s ease-in-out;
+}
+
+.footer{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    /* text-align: center; */
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p{
+    font-family: 'Black Ops One', cursive;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+.footer p a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer p a:hover{
+    color: #000;
+    text-decoration: underline;
+    transition: 0.3s ease-in-out;
 }
